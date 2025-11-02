@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HouseLearning Staff</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Define theme variables */
+        :root {
+            --primary: #1e3a8a; /* Dark Blue */
+            --accent: #06b6d4; /* Cyan/Teal */
+            --text-light: #f3f4f6;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #030712; /* Very Dark Background */
+            color: var(--text-light);
+            /* Smooth background/color transition for a polished feel */
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        /* Card Hover Animation: Lift and subtle shadow glow */
+        .staff-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            will-change: transform, box-shadow;
+        }
+        .staff-card:hover {
+            transform: translateY(-8px);
+            /* Soft, glowing accent shadow on hover */
+            box-shadow: 0 15px 30px rgba(6, 182, 212, 0.2);
+        }
+
+        /* Keyframes for simple entrance animation (fade-in-up) for 'animated' sections */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animated-section > * {
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+        }
+        /* Staggered delay for staff cards */
+        .staff-card-1 { animation-delay: 0.1s; }
+        .staff-card-2 { animation-delay: 0.2s; }
+        .staff-card-3 { animation-delay: 0.3s; }
+        .staff-card-4 { animation-delay: 0.4s; }
+
+        /* Button interaction styling */
+        .apply-button {
+            transition: background-color 0.3s, transform 0.1s;
+        }
+        .apply-button:hover {
+            background-color: #0e7490; /* Slightly darker cyan on hover */
+        }
+        .apply-button:active {
+            transform: scale(0.98); /* Press down effect */
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Main Header with sticky positioning -->
+    <header class="sticky top-0 z-50 bg-[#030712] bg-opacity-95 backdrop-blur-sm shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo/Title -->
+            <div class="text-3xl font-extrabold text-white tracking-tight">
+                <span class="text-4xl text-cyan-400 font-black">H</span>ouse<span class="text-cyan-400">L</span>earning
+            </div>
+
+            <!-- APPLY NOW Button (Top Right) -->
+            <a href="https://github.com/houselearning/apply/" target="_blank" class="apply-button px-6 py-2 bg-cyan-600 text-white font-bold rounded-full shadow-2xl hover:bg-cyan-700 transition duration-300 ease-in-out transform hover:scale-105">
+                APPLY NOW
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
+        <!-- Hero/Title Section - Animated -->
+        <section class="text-center mb-20 animated-section">
+            <h1 class="text-6xl sm:text-7xl font-extrabold mb-4 leading-tight" style="animation-delay: 0s;">
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-indigo-400">
+                    Meet Our Dedicated Team
+                </span>
+            </h1>
+            <p class="text-xl text-gray-400 max-w-3xl mx-auto" style="animation-delay: 0.1s;">
+                The passionate educators, developers, and community builders driving the HouseLearning mission forward.
+            </p>
+        </section>
+
+        <!-- About Section - Animated -->
+        <section class="mb-24 animated-section">
+            <h2 class="text-4xl font-bold mb-8 border-b-2 border-cyan-500 pb-2 inline-block" style="animation-delay: 0.2s;">
+                About HouseLearning
+            </h2>
+            <div class="text-lg text-gray-300 space-y-4" style="animation-delay: 0.3s;">
+                <p>
+                    HouseLearning is committed to providing a **cutting-edge, open-source educational platform** accessible to everyone, globally. Our initiative focuses on leveraging technology to create interactive, high-quality learning resources, free of charge. We believe that curiosity should be the only prerequisite to knowledge.
+                </p>
+                <p>
+                    From backend system architecture to ensuring our user guides are crystal clear, our team works tirelessly across development, education, and community outreach to maintain the integrity and innovation of the `houselearning.github.io` ecosystem.
+                </p>
+            </div>
+        </section>
+
+        <!-- Staff Section (The Cards) - Animated -->
+        <section class="animated-section">
+            <h2 class="text-4xl font-bold mb-12 text-center" style="animation-delay: 0.4s;">
+                Our Core Staff
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+                <a href="https://houselearning.github.io/staff/members/alex-manochio.html" target="_blank" class="staff-card group block p-6 bg-gray-800 rounded-xl shadow-2xl staff-card-1 border-b-4 border-cyan-600">
+                    <div class="flex flex-col items-center text-center">
+                        <img src="https://avatars.githubusercontent.com/u/74386189" onerror="this.onerror=null; this.src='https://placehold.co/128x128/1f2937/d1d5db?text=A.M'" alt="Dr. Alistair Rigsby" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-cyan-500 transition-transform group-hover:scale-105">
+                        <h3 class="text-2xl font-semibold text-white mb-1">Alexander Manochio</h3>
+                        <p class="text-cyan-400 text-sm font-medium mb-3">Founder • Chief Executive Officer</p>
+                        <p class="text-gray-400 text-sm">Founded HouseLearning with a passion to give free education.</p>
+                    </div>
+                </a>
+
+                <a href="https://houselearning.github.io/staff/members/matthew-sited.html" target="_blank" class="staff-card group block p-6 bg-gray-800 rounded-xl shadow-2xl staff-card-2 border-b-4 border-cyan-600">
+                    <div class="flex flex-col items-center text-center">
+                        <img src="https://avatars.githubusercontent.com/u/197417406" onerror="this.onerror=null; this.src='https://placehold.co/128x128/1f2937/d1d5db?text=M.S'" alt="Mrs. Chloe Vesta" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-cyan-500 transition-transform group-hover:scale-105">
+                        <h3 class="text-2xl font-semibold text-white mb-1">Matthew Sited</h3>
+                        <p class="text-cyan-400 text-sm font-medium mb-3">Lead Software Developer</p>
+                        <p class="text-gray-400 text-sm">Oversees all platform design and technical infrastructure.</p>
+                    </div>
+                </a>
+
+                <a href="https://houselearning.github.io/staff/members/oliver-mendez.html" target="_blank" class="staff-card group block p-6 bg-gray-800 rounded-xl shadow-2xl staff-card-3 border-b-4 border-cyan-600">
+                    <div class="flex flex-col items-center text-center">
+                        <img src="https://avatars.githubusercontent.com/u/234815395" onerror="this.onerror=null; this.src='https://placehold.co/128x128/1f2937/d1d5db?text=O.M'" alt="Mr. Leo Kwan" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-cyan-500 transition-transform group-hover:scale-105">
+                        <h3 class="text-2xl font-semibold text-white mb-1">Oliver Mendez</h3>
+                        <p class="text-cyan-400 text-sm font-medium mb-3">Community & Outreach Manager</p>
+                        <p class="text-gray-400 text-sm">Manages volunteer efforts and user engagement programs.</p>
+                    </div>
+                </a>
+
+                <a href="https://houselearning.github.io/staff/members/members/khalid-ameri.html" target="_blank" class="staff-card group block p-6 bg-gray-800 rounded-xl shadow-2xl staff-card-4 border-b-4 border-cyan-600">
+                    <div class="flex flex-col items-center text-center">
+                        <img src="https://avatars.githubusercontent.com/u/236936381" onerror="this.onerror=null; this.src='https://placehold.co/128x128/1f2937/d1d5db?text=K.A'" alt="Ms. Priya Sharma" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-cyan-500 transition-transform group-hover:scale-105">
+                        <h3 class="text-2xl font-semibold text-white mb-1">Khalid Ameri</h3>
+                        <p class="text-cyan-400 text-sm font-medium mb-3">Firebase & Database Manager</p>
+                        <p class="text-gray-400 text-sm">Ensures all educational materials are secured and protected.</p>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-20 py-8 bg-gray-900 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
+            &copy; 2025 HouseLearning. All rights reserved. Built with passion for Open Source Education.
+        </div>
+    </footer>
+
+</body>
+</html>
