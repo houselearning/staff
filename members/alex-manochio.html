@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jane Doe - Lead Contributor | HouseLearning</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Load Lucide icons for professional look -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #030712; /* Very Dark Background */
+            color: #f3f4f6;
+        }
+        /* Custom scrollbar to match dark theme (optional, but nice touch) */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #1f2937; }
+        ::-webkit-scrollbar-thumb { background: #06b6d4; border-radius: 4px; }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <!-- Header & Back Button -->
+    <header class="bg-[#030712] border-b border-gray-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="houselearning_staff.html" class="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-lg font-medium">
+                <i data-lucide="arrow-left" class="w-5 h-5 mr-2"></i>
+                Back to Staff Directory
+            </a>
+            <div class="text-xl font-extrabold text-white">
+                <span class="text-2xl text-cyan-400 font-black">H</span>L
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
+        <!-- Profile Card Section -->
+        <section class="bg-gray-900 p-8 sm:p-10 rounded-2xl shadow-2xl border-t-4 border-cyan-600 mb-12">
+            <div class="flex flex-col md:flex-row items-start md:items-center">
+                <!-- Profile Image -->
+                <img src="https://github.com/ajm19826.png" alt="Jane Doe" class="w-36 h-36 rounded-full object-cover mb-6 md:mb-0 md:mr-8 border-4 border-cyan-500 shadow-xl">
+
+                <!-- Profile Text -->
+                <div>
+                    <span class="text-sm font-semibold uppercase text-cyan-400 tracking-wider">Lead Contributor</span>
+                    <h1 class="text-5xl font-extrabold mt-1 mb-2 leading-tight">Alex Manochio</h1>
+                    <p class="text-gray-400 text-lg">
+                        "Enabling global access to knowledge, one open-source module at a time."
+                    </p>
+                </div>
+            </div>
+
+            <!-- Contact/Social Links -->
+            <div class="mt-8 pt-6 border-t border-gray-800 flex flex-wrap gap-4">
+                <a href="https://ajm19826.atabook.org/" class="flex items-center text-gray-300 hover:text-cyan-400 transition-colors">
+                    <i data-lucide="mail" class="w-5 h-5 mr-2"></i> ajm19826.atabook.org
+                </a>
+                <a href="https://github.com/ajm19826" target="_blank" class="flex items-center text-gray-300 hover:text-cyan-400 transition-colors">
+                    <i data-lucide="github" class="w-5 h-5 mr-2"></i> /ajm19826
+                </a>
+                <a href="https://www.linkedin.com/in/alex-manochio/" target="_blank" class="flex items-center text-gray-300 hover:text-cyan-400 transition-colors">
+                    <i data-lucide="linkedin" class="w-5 h-5 mr-2"></i> LinkedIn
+                </a>
+            </div>
+        </section>
+
+        <!-- About and Responsibilities -->
+        <section class="space-y-12">
+            <!-- About Section -->
+            <div>
+                <h2 class="text-3xl font-bold mb-4 text-cyan-400 flex items-center">
+                    <i data-lucide="user" class="w-7 h-7 mr-3"></i>
+                    About
+                </h2>
+                <div class="text-gray-300 space-y-4 text-lg">
+                    <p>
+Alexander Manochio is the visionary **Founder and Chief Executive Officer** of HouseLearning. With a robust background in technology and a deep commitment to open-source education, Alex utilizes his expertise—visible through his active development contributions on GitHub under the handle `ajm19826`—to guide the platform's architectural and strategic development. As detailed on his professional presence on LinkedIn, Alex is dedicated to transforming global education by building accessible, high-quality learning resources, ensuring the HouseLearning mission remains centered on technological innovation and community empowerment.
+
+                    <p>
+His passion is rooted in the belief that educational tools should be available freely and transparently, fostering a global community of learners and contributors.                    </p>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Role & Responsibilities Section -->
+            <div>
+                <h2 class="text-3xl font-bold mb-4 text-cyan-400 flex items-center">
+                    <i data-lucide="briefcase" class="w-7 h-7 mr-3"></i>
+                    Role & Focus
+                </h2>
+                <ul class="list-none space-y-3 text-lg text-gray-300">
+                    <li class="flex items-start">
+                        <i data-lucide="check-circle" class="w-5 h-5 text-cyan-500 mr-3 mt-1 flex-shrink-0"></i>
+                        **Platform Architecture:** Designing modular and scalable code solutions for new learning modules.
+                    </li>
+                    <li class="flex items-start">
+                        <i data-lucide="check-circle" class="w-5 h-5 text-cyan-500 mr-3 mt-1 flex-shrink-0"></i>
+                        **Mentor Network:** Coordinating the technical mentorship program for junior contributors.
+                    </li>
+                    <li class="flex items-start">
+                        <i data-lucide="check-circle" class="w-5 h-5 text-cyan-500 mr-3 mt-1 flex-shrink-0"></i>
+                        **Security & Compliance:** Overseeing code review for data security best practices.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Script: Required for Lucide icons -->
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
